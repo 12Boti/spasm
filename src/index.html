@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<title>Login</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  form {
+    width: 20rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  input {
+    display: block;
+    width: 100%;
+  }
+  #submit {
+    width: 5rem;
+    margin: auto;
+  }
+</style>
+<form method="post">
+  <label>
+    Password:
+    <input name="pass" type="password" />
+  </label>
+  <br />
+  <label>
+    TOTP:
+    <input
+      name="totp"
+      type="text"
+      inputmode="numeric"
+      pattern="\d{6}"
+      title="6 digits"
+    />
+  </label>
+  <br />
+  <input id="submit" type="submit" />
+</form>
