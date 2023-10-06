@@ -41,6 +41,10 @@ in
         LockPersonality = true;
         CapabilityBoundingSet = "";
         ReadOnlyPaths = "/";
+        SystemCallArchitectures = "native";
+        ProtectHostname = true;
+        ProcSubset = "pid";
+        SystemCallFilter = "@basic-io @file-system @signal @process @io-event @network-io @ipc setrlimit madvise uname";
       };
     };
   };
